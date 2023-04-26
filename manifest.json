@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Suggester",
+  "version": "1.0.0",
+  "description": "Get suggestions for prompts to write about",
+  "icons": {
+    "16": "./utils/icon/icon.png",
+    "32": "./utils/icon/icon.png",
+    "64": "./utils/icon/icon.png",
+    "128": "./utils/icon/icon.png"
+    
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "./utils/icon/icon.png",
+      "32": "./utils/icon/icon.png",
+      "64": "./utils/icon/icon.png",
+      "128": "./utils/icon/icon.png"
+    },
+    "default_title": "My Extension",
+    "default_popup": "index.html",
+    "default_width": 800,
+    "default_height": 600
+  }
+}
+
+
